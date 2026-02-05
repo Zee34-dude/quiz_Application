@@ -10,9 +10,10 @@ interface ResultsProps {
   total: number
   trackName: string
   trackType: 'web-development' | 'data-analysis'
+  setCompleted:(completed:boolean)=>void
 }
 
-export function QuizResults({ score, total, trackName, trackType }: ResultsProps) {
+export function QuizResults({ score, total, trackName, trackType,setCompleted }: ResultsProps) {
   const percentage = Math.round((score / total) * 100)
 
   const getPerformanceLevel = (percent: number) => {
@@ -91,6 +92,7 @@ export function QuizResults({ score, total, trackName, trackType }: ResultsProps
               <Button
                 variant="outline"
                 className="w-full bg-transparent"
+                onClick={()=>setCompleted(false)}
               >
                 Retake Quiz
               </Button>

@@ -60,7 +60,7 @@ export default function Page() {
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-medium text-primary">
-                    {hoveredTrack === 'web' ? '50 Questions' : '10 Difficulty Levels'}
+                    {hoveredTrack === 'web' ? '50 Questions' : '1 Difficulty Levels'}
                   </span>
                   <Button
                     className="bg-primary hover:bg-primary/90 text-primary-foreground"
@@ -100,7 +100,7 @@ export default function Page() {
                 </p>
                 <div className="flex items-center justify-between">
                   <span className="text-sm font-medium text-accent">
-                    {hoveredTrack === 'data' ? '50 Questions' : '8 Difficulty Levels'}
+                    {hoveredTrack === 'data' ? '10 Questions' : '1 Difficulty Levels'}
                   </span>
                   <Button
                     className="bg-accent hover:bg-accent/90 text-accent-foreground"
@@ -118,7 +118,7 @@ export default function Page() {
         <div className="grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto mt-16 pt-12 border-t border-border">
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
-              500+
+              100+
             </div>
             <p className="text-sm text-muted-foreground">Questions</p>
           </div>

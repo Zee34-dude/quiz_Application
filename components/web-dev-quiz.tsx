@@ -18,330 +18,571 @@ interface Question {
 const webDevQuestions: Question[] = [
   {
     id: 1,
-    question: 'What is computer science primarily concerned with?',
+    question: 'What is computer science mainly focused on?',
     options: [
-      'The study of computation, data, and algorithms',
-      'Designing computer hardware only',
-      'Using computers for gaming',
-      'Fixing computer hardware'
+      'Studying computation and data processing',
+      'Building physical computers',
+      'Designing websites only',
+      'Fixing hardware issues'
     ],
     correctAnswer: 0,
-    explanation: 'Computer science focuses on computation, data, algorithms, and information processing.'
+    explanation: 'Computer science studies computation, algorithms, and data.'
   },
   {
     id: 2,
-    question: 'Which component is considered the brain of the computer?',
-    options: ['RAM', 'CPU', 'Hard Disk', 'Motherboard'],
+    question: 'Which component executes instructions?',
+    options: ['RAM', 'CPU', 'SSD', 'Power Supply'],
     correctAnswer: 1,
-    explanation: 'The CPU executes instructions and performs calculations.'
+    explanation: 'The CPU executes instructions.'
   },
   {
     id: 3,
-    question: 'Which memory is volatile?',
-    options: ['ROM', 'SSD', 'RAM', 'Hard Disk'],
-    correctAnswer: 2,
-    explanation: 'RAM loses data when power is turned off.'
+    question: 'Which memory is non-volatile?',
+    options: ['RAM', 'Cache', 'Registers', 'ROM'],
+    correctAnswer: 3,
+    explanation: 'ROM retains data without power.'
   },
   {
     id: 4,
-    question: 'What does ALU stand for?',
+    question: 'What does an operating system do?',
     options: [
-      'Arithmetic Logic Unit',
-      'Advanced Logic Unit',
-      'Array Logic Utility',
-      'Automated Logic Unit'
+      'Manages hardware and software resources',
+      'Compiles code',
+      'Designs user interfaces',
+      'Stores web pages'
     ],
     correctAnswer: 0,
-    explanation: 'The ALU handles arithmetic and logical operations.'
+    explanation: 'The OS manages system resources.'
   },
   {
     id: 5,
-    question: 'What is software?',
-    options: [
-      'Physical computer components',
-      'Input devices',
-      'Programs and instructions',
-      'Electrical circuits'
-    ],
+    question: 'Which is an example of system software?',
+    options: ['Browser', 'Text editor', 'Operating system', 'Game'],
     correctAnswer: 2,
-    explanation: 'Software consists of programs that tell hardware what to do.'
+    explanation: 'Operating systems are system software.'
   },
 
   {
     id: 6,
     question: 'What is an algorithm?',
     options: [
+      'A hardware device',
+      'A step-by-step problem-solving procedure',
       'A programming language',
-      'A database',
-      'A step-by-step solution to a problem',
-      'A hardware component'
+      'A database'
     ],
-    correctAnswer: 2,
-    explanation: 'Algorithms define structured steps to solve problems.'
+    correctAnswer: 1,
+    explanation: 'Algorithms define structured problem-solving steps.'
   },
   {
     id: 7,
-    question: 'Which language is closest to machine code?',
-    options: ['JavaScript', 'Assembly', 'Python', 'HTML'],
-    correctAnswer: 1,
-    explanation: 'Assembly language is very close to machine-level instructions.'
+    question: 'Which language is closest to hardware?',
+    options: ['JavaScript', 'Python', 'Assembly', 'HTML'],
+    correctAnswer: 2,
+    explanation: 'Assembly is closest to machine code.'
   },
   {
     id: 8,
-    question: 'Which is a high-level programming language?',
-    options: ['Binary', 'Assembly', 'JavaScript', 'Machine code'],
-    correctAnswer: 2,
-    explanation: 'JavaScript is a high-level, human-readable language.'
+    question: 'Which language is high-level?',
+    options: ['Binary', 'Machine code', 'Assembly', 'JavaScript'],
+    correctAnswer: 3,
+    explanation: 'JavaScript is a high-level language.'
   },
   {
     id: 9,
-    question: 'What symbol represents a decision in a flowchart?',
-    options: ['Rectangle', 'Oval', 'Diamond', 'Circle'],
-    correctAnswer: 2,
-    explanation: 'Diamonds represent conditional decisions.'
+    question: 'What does a flowchart help with?',
+    options: [
+      'Visualizing logic',
+      'Compiling programs',
+      'Debugging hardware',
+      'Storing data'
+    ],
+    correctAnswer: 0,
+    explanation: 'Flowcharts visually represent logic.'
   },
   {
     id: 10,
-    question: 'What does HTML stand for?',
-    options: [
-      'Hyperlinks and Text Markup Language',
-      'Home Tool Markup Language',
-      'Hyper Text Markup Language',
-      'High Tech Modern Language'
-    ],
+    question: 'Which flowchart symbol represents a decision?',
+    options: ['Oval', 'Rectangle', 'Diamond', 'Arrow'],
     correctAnswer: 2,
-    explanation: 'HTML stands for Hyper Text Markup Language.'
+    explanation: 'Diamonds represent decisions.'
   },
 
   {
     id: 11,
-    question: 'Which keyword declares a block-scoped variable?',
-    options: ['var', 'const', 'let', 'static'],
+    question: 'What is JavaScript mainly used for?',
+    options: [
+      'Server hardware control',
+      'Styling web pages',
+      'Adding interactivity to web pages',
+      'Database design'
+    ],
     correctAnswer: 2,
-    explanation: '`let` creates block-scoped variables.'
+    explanation: 'JavaScript adds interactivity.'
   },
   {
     id: 12,
-    question: 'Which JavaScript data type is NOT primitive?',
-    options: ['String', 'Number', 'Object', 'Boolean'],
-    correctAnswer: 2,
-    explanation: 'Objects are non-primitive data types.'
+    question: 'Which keyword declares a constant?',
+    options: ['let', 'var', 'static', 'const'],
+    correctAnswer: 3,
+    explanation: '`const` creates constants.'
   },
   {
     id: 13,
-    question: 'Which operator checks both value and type?',
-    options: ['==', '=', '!=', '==='],
-    correctAnswer: 3,
-    explanation: '`===` checks strict equality.'
+    question: 'Which data type is NOT primitive?',
+    options: ['Object', 'String', 'Number', 'Boolean'],
+    correctAnswer: 0,
+    explanation: 'Objects are non-primitive.'
   },
   {
     id: 14,
-    question: 'What does NaN mean?',
+    question: 'What does === compare?',
     options: [
-      'Negative and Null',
-      'Not a Number',
-      'New Assigned Number',
-      'No active Number'
+      'Only values',
+      'Only types',
+      'Value and type',
+      'References only'
     ],
-    correctAnswer: 1,
-    explanation: 'NaN means a value is not a valid number.'
+    correctAnswer: 2,
+    explanation: '=== checks value and type.'
   },
   {
     id: 15,
-    question: 'What is hoisting?',
+    question: 'What does NaN mean?',
     options: [
-      'Running code faster',
-      'Moving declarations to the top of scope',
-      'Deleting unused variables',
-      'Optimizing memory'
+      'Null and None',
+      'Not a Number',
+      'New assigned Number',
+      'Negative Number'
     ],
     correctAnswer: 1,
-    explanation: 'Hoisting moves variable and function declarations.'
+    explanation: 'NaN means Not a Number.'
   },
 
   {
     id: 16,
-    question: 'What is the DOM?',
+    question: 'What is hoisting?',
     options: [
-      'Data Object Model',
-      'Document Output Method',
-      'Document Object Model',
-      'Dynamic Object Mapper'
+      'Moving declarations to the top of scope',
+      'Deleting variables',
+      'Optimizing loops',
+      'Reducing memory'
     ],
-    correctAnswer: 2,
-    explanation: 'The DOM represents the structure of web documents.'
+    correctAnswer: 0,
+    explanation: 'Hoisting moves declarations.'
   },
   {
     id: 17,
-    question: 'Which method selects the first matching CSS selector?',
+    question: 'Which keyword has block scope?',
+    options: ['var', 'global', 'let', 'this'],
+    correctAnswer: 2,
+    explanation: '`let` is block scoped.'
+  },
+  {
+    id: 18,
+    question: 'What is a function?',
+    options: [
+      'A loop',
+      'A reusable block of code',
+      'A variable',
+      'A class'
+    ],
+    correctAnswer: 1,
+    explanation: 'Functions encapsulate reusable logic.'
+  },
+  {
+    id: 19,
+    question: 'What does return do?',
+    options: [
+      'Stops execution',
+      'Logs output',
+      'Returns a value',
+      'Declares a variable'
+    ],
+    correctAnswer: 2,
+    explanation: 'Return sends a value back.'
+  },
+  {
+    id: 20,
+    question: 'What is scope?',
+    options: [
+      'Memory size',
+      'Execution speed',
+      'Variable accessibility',
+      'Code style'
+    ],
+    correctAnswer: 2,
+    explanation: 'Scope defines where variables are accessible.'
+  },
+
+  {
+    id: 21,
+    question: 'What is the DOM?',
+    options: [
+      'Document Object Model',
+      'Data Output Module',
+      'Dynamic Object Manager',
+      'Document Order Map'
+    ],
+    correctAnswer: 0,
+    explanation: 'DOM represents the document structure.'
+  },
+  {
+    id: 22,
+    question: 'Which method selects by CSS selector?',
     options: [
       'getElementById',
       'querySelector',
-      'getElementsByClassName',
-      'selectNode'
+      'getElementsByTagName',
+      'selectElement'
     ],
     correctAnswer: 1,
     explanation: '`querySelector` uses CSS selectors.'
   },
   {
-    id: 18,
-    question: 'What does preventDefault() do?',
+    id: 23,
+    question: 'What is an event?',
     options: [
-      'Stops event bubbling',
-      'Prevents default browser behavior',
-      'Deletes the event',
-      'Reloads the page'
+      'A variable',
+      'A user or browser action',
+      'A function',
+      'A loop'
     ],
     correctAnswer: 1,
-    explanation: 'It stops the browser’s default action.'
+    explanation: 'Events are actions like clicks.'
   },
   {
-    id: 19,
+    id: 24,
     question: 'What is event bubbling?',
     options: [
-      'Events flow from parent to child',
-      'Events repeat continuously',
-      'Events are canceled',
-      'Events flow from child to parent'
+      'Events move top-down',
+      'Events repeat',
+      'Events stop',
+      'Events move bottom-up'
     ],
     correctAnswer: 3,
-    explanation: 'Event bubbling propagates upward in the DOM.'
+    explanation: 'Bubbling propagates upward.'
   },
   {
-    id: 20,
-    question: 'What is asynchronous programming?',
+    id: 25,
+    question: 'What does preventDefault() do?',
     options: [
-      'Blocking execution',
-      'Running tasks independently',
-      'Using only loops',
-      'Single-threaded execution'
+      'Stops propagation',
+      'Stops browser default behavior',
+      'Deletes events',
+      'Reloads page'
     ],
     correctAnswer: 1,
-    explanation: 'Async programming prevents blocking.'
+    explanation: 'It prevents default browser actions.'
   },
 
   {
-    id: 21,
-    question: 'What is version control?',
+    id: 26,
+    question: 'What is asynchronous programming?',
     options: [
-      'Tracking UI changes',
-      'Managing file changes over time',
-      'Optimizing code',
-      'Deploying applications'
+      'Blocking execution',
+      'Parallel task handling',
+      'Single-thread execution',
+      'Loop-based logic'
     ],
     correctAnswer: 1,
-    explanation: 'Version control tracks and manages file history.'
+    explanation: 'Async allows non-blocking tasks.'
   },
   {
-    id: 22,
+    id: 27,
+    question: 'What problem do Promises solve?',
+    options: [
+      'Syntax errors',
+      'Callback hell',
+      'Memory leaks',
+      'Slow rendering'
+    ],
+    correctAnswer: 1,
+    explanation: 'Promises improve async readability.'
+  },
+  {
+    id: 28,
+    question: 'What does async/await do?',
+    options: [
+      'Blocks execution',
+      'Simplifies asynchronous code',
+      'Creates threads',
+      'Improves performance automatically'
+    ],
+    correctAnswer: 1,
+    explanation: 'Async/await simplifies async code.'
+  },
+  {
+    id: 29,
+    question: 'What is the call stack?',
+    options: [
+      'Memory storage',
+      'Execution order of functions',
+      'DOM tree',
+      'Event queue'
+    ],
+    correctAnswer: 1,
+    explanation: 'The call stack tracks function execution.'
+  },
+  {
+    id: 30,
+    question: 'What is a callback?',
+    options: [
+      'A returned value',
+      'A function passed as argument',
+      'A variable',
+      'A loop'
+    ],
+    correctAnswer: 1,
+    explanation: 'Callbacks are functions passed to other functions.'
+  },
+
+  {
+    id: 31,
+    question: 'What is version control?',
+    options: [
+      'Tracking file changes over time',
+      'Optimizing code',
+      'Running tests',
+      'Deploying apps'
+    ],
+    correctAnswer: 0,
+    explanation: 'Version control tracks changes.'
+  },
+  {
+    id: 32,
+    question: 'Why is version control important?',
+    options: [
+      'Improves UI',
+      'Enables collaboration',
+      'Speeds execution',
+      'Prevents all bugs'
+    ],
+    correctAnswer: 1,
+    explanation: 'It enables teamwork and history tracking.'
+  },
+  {
+    id: 33,
     question: 'What is Git?',
     options: [
       'A database',
       'A browser',
       'A version control system',
-      'A programming language'
+      'An IDE'
     ],
     correctAnswer: 2,
-    explanation: 'Git is a distributed version control system.'
+    explanation: 'Git is a VCS.'
   },
   {
-    id: 23,
+    id: 34,
     question: 'What is a repository?',
     options: [
       'A commit',
+      'A Git-tracked project',
       'A branch',
-      'A folder tracked by Git',
-      'A remote server'
+      'A server'
     ],
-    correctAnswer: 2,
+    correctAnswer: 1,
     explanation: 'Repositories store project history.'
   },
   {
-    id: 24,
+    id: 35,
     question: 'What is a commit?',
     options: [
-      'A saved snapshot of changes',
-      'A deleted file',
-      'A branch',
-      'A merge conflict'
+      'Deleting code',
+      'Saving a snapshot of changes',
+      'Merging branches',
+      'Pushing code'
     ],
-    correctAnswer: 0,
-    explanation: 'Commits record changes.'
-  },
-  {
-    id: 25,
-    question: 'What causes merge conflicts?',
-    options: [
-      'Large repositories',
-      'Slow internet',
-      'Different changes to the same file',
-      'Too many branches'
-    ],
-    correctAnswer: 2,
-    explanation: 'Conflicts occur when Git cannot auto-merge.'
+    correctAnswer: 1,
+    explanation: 'Commits save changes.'
   },
 
   {
-    id: 26,
+    id: 36,
     question: 'What does git add do?',
     options: [
-      'Creates a branch',
-      'Stages changes',
       'Commits files',
-      'Pushes to remote'
+      'Stages changes',
+      'Pushes to remote',
+      'Creates branch'
     ],
     correctAnswer: 1,
-    explanation: '`git add` stages files for commit.'
+    explanation: 'git add stages changes.'
   },
   {
-    id: 27,
+    id: 37,
     question: 'What does git push do?',
     options: [
-      'Downloads changes',
       'Uploads commits to remote',
+      'Downloads commits',
       'Deletes history',
-      'Resets HEAD'
+      'Resets branch'
     ],
-    correctAnswer: 1,
-    explanation: '`git push` uploads commits.'
+    correctAnswer: 0,
+    explanation: 'git push uploads commits.'
   },
   {
-    id: 28,
+    id: 38,
     question: 'What does git pull do?',
     options: [
-      'Uploads code',
-      'Fetches and merges changes',
       'Deletes files',
-      'Creates commits'
+      'Fetches and merges changes',
+      'Creates commits',
+      'Stages files'
     ],
     correctAnswer: 1,
-    explanation: '`git pull` updates local repo.'
+    explanation: 'git pull updates local repo.'
   },
   {
-    id: 29,
+    id: 39,
     question: 'What is a branch?',
     options: [
       'A folder',
-      'A server',
-      'An independent line of development',
-      'A commit hash'
+      'An independent development line',
+      'A commit hash',
+      'A tag'
     ],
-    correctAnswer: 2,
+    correctAnswer: 1,
     explanation: 'Branches allow parallel work.'
   },
   {
-    id: 30,
-    question: 'What is .gitignore used for?',
+    id: 40,
+    question: 'What causes merge conflicts?',
     options: [
-      'Ignoring commits',
-      'Ignoring specific files',
-      'Protecting branches',
-      'Storing secrets'
+      'Slow network',
+      'Different changes to same file',
+      'Large files',
+      'Too many commits'
     ],
     correctAnswer: 1,
-    explanation: '.gitignore excludes files from tracking.'
+    explanation: 'Conflicts occur on overlapping changes.'
+  },
+
+  {
+    id: 41,
+    question: 'What is a remote repository?',
+    options: [
+      'A deleted repo',
+      'An online-hosted repo',
+      'A branch',
+      'A commit'
+    ],
+    correctAnswer: 1,
+    explanation: 'Remote repos are hosted online.'
+  },
+  {
+    id: 42,
+    question: 'What is .gitignore used for?',
+    options: [
+      'Ignoring files from tracking',
+      'Deleting commits',
+      'Protecting branches',
+      'Storing credentials'
+    ],
+    correctAnswer: 0,
+    explanation: '.gitignore excludes files.'
+  },
+  {
+    id: 43,
+    question: 'What is HEAD in Git?',
+    options: [
+      'First commit',
+      'Current commit pointer',
+      'Remote branch',
+      'Main server'
+    ],
+    correctAnswer: 1,
+    explanation: 'HEAD points to current commit.'
+  },
+  {
+    id: 44,
+    question: 'What is a distributed VCS?',
+    options: [
+      'One central repo',
+      'Each user has full history',
+      'No backups',
+      'Cloud-only'
+    ],
+    correctAnswer: 1,
+    explanation: 'Distributed VCS gives full history to all users.'
+  },
+  {
+    id: 45,
+    question: 'What is refactoring?',
+    options: [
+      'Adding features',
+      'Improving code without changing behavior',
+      'Fixing bugs',
+      'Deploying code'
+    ],
+    correctAnswer: 1,
+    explanation: 'Refactoring improves code quality.'
+  },
+
+  {
+    id: 46,
+    question: 'What is debugging?',
+    options: [
+      'Writing tests',
+      'Finding and fixing errors',
+      'Deploying apps',
+      'Compiling code'
+    ],
+    correctAnswer: 1,
+    explanation: 'Debugging fixes bugs.'
+  },
+  {
+    id: 47,
+    question: 'What is Bitbucket?',
+    options: [
+      'A Git hosting service',
+      'A programming language',
+      'A browser',
+      'A framework'
+    ],
+    correctAnswer: 0,
+    explanation: 'Bitbucket hosts Git repositories.'
+  },
+  {
+    id: 48,
+    question: 'What is Bitbucket mainly used for?',
+    options: [
+      'Designing UI',
+      'Hosting Git repositories',
+      'Writing JavaScript',
+      'Database management'
+    ],
+    correctAnswer: 1,
+    explanation: 'Bitbucket hosts and manages Git repos.'
+  },
+  {
+    id: 49,
+    question: 'What is collaboration in Git?',
+    options: [
+      'Writing code alone',
+      'Multiple developers working on same repo',
+      'Deleting branches',
+      'Resetting commits'
+    ],
+    correctAnswer: 1,
+    explanation: 'Collaboration allows team workflows.'
+  },
+  {
+    id: 50,
+    question: 'Why are commits important?',
+    options: [
+      'They track changes',
+      'They run code',
+      'They improve UI',
+      'They host projects'
+    ],
+    correctAnswer: 0,
+    explanation: 'Commits preserve history.'
   }
 ];
+
+
 const webDevQuestionsPart2: Question[] = [
   {
     id: 51,
@@ -759,11 +1000,13 @@ const webDevQuestionsPart2: Question[] = [
 
 interface QuizProps {
   onComplete: (score: number, total: number) => void
+  questionState: boolean
+  setQuestionState:React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export function WebDevQuiz({ onComplete }: QuizProps) {
+export function WebDevQuiz({ onComplete,questionState,setQuestionState }: QuizProps) {
   const [currentQuestion, setCurrentQuestion] = useState(0)
-  const [questionState, setQuestionState] = useState(false)
+
   const [score, setScore] = useState(0)
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
   const [showExplanation, setShowExplanation] = useState(false)
@@ -803,18 +1046,14 @@ export function WebDevQuiz({ onComplete }: QuizProps) {
     setSelectedAnswer(null)
     setShowExplanation(false)
     setAnswered(false)
-    setQuestionState(prev=>!prev)
+    setQuestionState((prev:boolean)=>!prev)
   }
 
   const handleTimeUp = () => {
-    setTimeUp(true)
     const finalScore = score + (answered && selectedAnswer === question.correctAnswer ? 1 : 0)
     onComplete(finalScore, webDevQuestions.length)
   }
 
-  if (timeUp) {
-    return null
-  }
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-muted py-8">
@@ -824,7 +1063,7 @@ export function WebDevQuiz({ onComplete }: QuizProps) {
           <div className="flex justify-between items-center mb-4">
             <h1 className="text-3xl font-bold text-foreground">Web Development Quiz</h1>
             <div className="text-right flex flex-col items-end gap-2">
-              <QuizTimer initialMinutes={20} onTimeUp={handleTimeUp} />
+              <QuizTimer initialMinutes={10} onTimeUp={handleTimeUp} />
               <p className="text-sm text-muted-foreground">Question {currentQuestion + 1} of {webDevQuestions.length}</p>
               <p className="text-lg font-semibold text-primary">Score: {score}</p>
             </div>
