@@ -1013,7 +1013,7 @@ export function WebDevQuiz({ onComplete,questionState,setQuestionState }: QuizPr
   const [answered, setAnswered] = useState(false)
   const [timeUp, setTimeUp] = useState(false)
 
-  const currentWebDevQuestions= questionState==true?webDevQuestions:webDevQuestionsPart2
+  const currentWebDevQuestions= questionState==false?webDevQuestions:webDevQuestionsPart2
   const question = currentWebDevQuestions[currentQuestion]
   const progress = ((currentQuestion + 1) / webDevQuestions.length) * 100
 
