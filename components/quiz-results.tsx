@@ -9,13 +9,26 @@ interface ResultsProps {
   score: number
   total: number
   trackName: string
-  trackType: 'web-development' | 'data-analysis'
-  setCompleted:(completed:boolean)=>void
+  trackType: 'web-development' | 'data-analysis' | 'product-design'
+  setCompleted: (completed: boolean) => void
 }
 
-export function QuizResults({ score, total, trackName, trackType,setCompleted }: ResultsProps) {
+export function QuizResults({ score, total, trackName, trackType, setCompleted }: ResultsProps) {
   const percentage = Math.round((score / total) * 100)
-
+  const Learningtrack = [
+    {
+      trackType: 'web-development',
+      track: "Web Development"
+    },
+    {
+      trackType: 'data-analysis',
+      track: "Data Analytics"
+    },
+    {
+      trackType: 'product-design',
+      track: "Product Design"
+    }
+  ]
   const getPerformanceLevel = (percent: number) => {
     if (percent === 100) return { level: 'Perfect!', color: 'text-green-600', bg: 'bg-green-50 dark:bg-green-950' }
     if (percent >= 80) return { level: 'Excellent!', color: 'text-green-600', bg: 'bg-green-50 dark:bg-green-950' }
@@ -92,18 +105,17 @@ export function QuizResults({ score, total, trackName, trackType,setCompleted }:
               <Button
                 variant="outline"
                 className="w-full bg-transparent"
-                onClick={()=>setCompleted(false)}
+                onClick={() => setCompleted(false)}
               >
                 Retake Quiz
               </Button>
             </Link>
             <Link href="/" className="w-full">
               <Button
-                className={`w-full ${
-                  trackType === 'web-development'
-                    ? 'bg-primary hover:bg-primary/90 text-primary-foreground'
-                    : 'bg-accent hover:bg-accent/90 text-accent-foreground'
-                }`}
+                className={`w-full ${trackType === 'web-development'
+                  ? 'bg-primary hover:bg-primary/90 text-primary-foreground'
+                  : 'bg-accent hover:bg-accent/90 text-accent-foreground'
+                  }`}
               >
                 <Home className="w-4 h-4 mr-2" />
                 Back to Home
@@ -116,17 +128,22 @@ export function QuizResults({ score, total, trackName, trackType,setCompleted }:
             <p className="text-muted-foreground mb-4">
               Want to try the other track?
             </p>
-            <Link
-              href={trackType === 'web-development' ? '/quiz/data-analysis' : '/quiz/web-development'}
-              className="w-full"
-            >
-              <Button
-                variant="outline"
-                className="w-full bg-transparent"
-              >
-                {trackType === 'web-development' ? 'Try Data Analysis Quiz' : 'Try Web Development Quiz'}
-              </Button>
-            </Link>
+            {
+              Learningtrack.map((trackobj,idx) => (trackType !== trackobj.trackType &&
+                <Link
+                  key={idx}
+                  href={trackType !== trackobj.trackType ? trackobj.trackType : ''}
+                  className="w-full "
+                >
+                  <Button
+                    variant="outline"
+                    className="w-full bg-transparent mb-2"
+                  >
+                    {trackobj.track}
+                  </Button>
+                </Link>))
+
+            }
           </div>
         </Card>
       </div>

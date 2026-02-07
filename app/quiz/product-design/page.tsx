@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import { DataAnalysisQuiz } from '@/components/data-analysis-quiz'
 import { QuizResults } from '@/components/quiz-results'
+import { ProductDesignQuiz } from '@/components/product-design-quiz'
 
 export default function DataAnalysisQuizPage() {
   const [completed, setCompleted] = useState(false)
@@ -19,11 +20,11 @@ export default function DataAnalysisQuizPage() {
         setCompleted={ setCompleted}
         score={results.score}
         total={results.total}
-        trackName="Data Analysis Track"
-        trackType="data-analysis"
+        trackName="Product Design Track"
+        trackType="product-design"
       />
     )
   }
 
-  return <DataAnalysisQuiz onComplete={handleComplete} />
+  return <ProductDesignQuiz onComplete={handleComplete} />
 }

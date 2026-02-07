@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { BookOpen, BarChart3 } from 'lucide-react'
+import { BookOpen, BarChart3,PaintbrushVertical } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export default function Page() {
@@ -32,7 +32,7 @@ export default function Page() {
         </div>
 
         {/* Track Selection */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+        <div className="grid md:grid-cols-3 gap-8  mx-auto mb-12">
           {/* Web Development Track */}
           <Link href="/quiz/web-development">
             <div
@@ -41,11 +41,10 @@ export default function Page() {
               onMouseLeave={() => setHoveredTrack(null)}
             >
               <div
-                className={`p-8 rounded-2xl border-2 transition-all duration-300 h-full flex flex-col ${
-                  hoveredTrack === 'web'
+                className={`p-8 rounded-2xl border-2 transition-all duration-300 h-full flex flex-col ${hoveredTrack === 'web'
                     ? 'border-primary bg-card shadow-lg scale-105'
                     : 'border-border bg-card hover:border-primary/50'
-                }`}
+                  }`}
               >
                 <div className="mb-6 inline-flex w-fit">
                   <div className="bg-primary/10 p-4 rounded-xl">
@@ -64,7 +63,7 @@ export default function Page() {
                   </span>
                   <Button
                     className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                    onClick={() => {}}
+                    onClick={() => { }}
                   >
                     Start Quiz
                   </Button>
@@ -81,11 +80,10 @@ export default function Page() {
               onMouseLeave={() => setHoveredTrack(null)}
             >
               <div
-                className={`p-8 rounded-2xl border-2 transition-all duration-300 h-full flex flex-col ${
-                  hoveredTrack === 'data'
+                className={`p-8 rounded-2xl border-2 transition-all duration-300 h-full flex flex-col ${hoveredTrack === 'data'
                     ? 'border-accent bg-card shadow-lg scale-105'
                     : 'border-border bg-card hover:border-accent/50'
-                }`}
+                  }`}
               >
                 <div className="mb-6 inline-flex w-fit">
                   <div className="bg-accent/10 p-4 rounded-xl">
@@ -104,7 +102,45 @@ export default function Page() {
                   </span>
                   <Button
                     className="bg-accent hover:bg-accent/90 text-accent-foreground"
-                    onClick={() => {}}
+                    onClick={() => { }}
+                  >
+                    Start Quiz
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </Link>
+          {/* Product Design Track */}
+          <Link href="/quiz/product-design">
+            <div
+              className="group cursor-pointer h-full"
+              onMouseEnter={() => setHoveredTrack('data')}
+              onMouseLeave={() => setHoveredTrack(null)}
+            >
+              <div
+                className={`p-8 rounded-2xl border-2 transition-all duration-300 h-full flex flex-col ${hoveredTrack === 'data'
+                    ? 'border-accent bg-card shadow-lg scale-105'
+                    : 'border-border bg-card hover:border-accent/50'
+                  }`}
+              >
+                <div className="mb-6 inline-flex w-fit">
+                  <div className="bg-[#bf1ee7]/10 p-4 rounded-xl">
+                    <PaintbrushVertical className="w-8 h-8 text-[#bf1ee7]" />
+                  </div>
+                </div>
+                <h2 className="text-2xl font-bold text-foreground mb-3">
+                 Product Design
+                </h2>
+                <p className="text-muted-foreground mb-6 flex-grow">
+                  Test your knowledge on product design
+                </p>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium text-[#bf1ee7]">
+                    {hoveredTrack === 'data' ? '10 Questions' : '1 Difficulty Levels'}
+                  </span>
+                  <Button
+                    className="bg-[#bf1ee7] hover:bg-accent/90 text-accent-foreground"
+                    onClick={() => { }}
                   >
                     Start Quiz
                   </Button>
@@ -124,7 +160,7 @@ export default function Page() {
           </div>
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-accent mb-2">
-              2 Tracks
+              3 Tracks
             </div>
             <p className="text-sm text-muted-foreground">Learning Paths</p>
           </div>
