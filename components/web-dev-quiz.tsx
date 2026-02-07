@@ -16,6 +16,7 @@ interface Question {
 }
 
 const webDevQuestions: Question[] = [
+  // ===== Computer Science Basics (1–5) =====
   {
     id: 1,
     question: 'What is computer science mainly focused on?',
@@ -62,6 +63,7 @@ const webDevQuestions: Question[] = [
     explanation: 'Operating systems are system software.'
   },
 
+  // ===== Programming & Algorithms (6–10) =====
   {
     id: 6,
     question: 'What is an algorithm?',
@@ -108,6 +110,7 @@ const webDevQuestions: Question[] = [
     explanation: 'Diamonds represent decisions.'
   },
 
+  // ===== JavaScript Fundamentals (11–15) =====
   {
     id: 11,
     question: 'What is JavaScript mainly used for?',
@@ -148,62 +151,6 @@ const webDevQuestions: Question[] = [
   },
   {
     id: 15,
-    question: 'What does NaN mean?',
-    options: [
-      'Null and None',
-      'Not a Number',
-      'New assigned Number',
-      'Negative Number'
-    ],
-    correctAnswer: 1,
-    explanation: 'NaN means Not a Number.'
-  },
-
-  {
-    id: 16,
-    question: 'What is hoisting?',
-    options: [
-      'Moving declarations to the top of scope',
-      'Deleting variables',
-      'Optimizing loops',
-      'Reducing memory'
-    ],
-    correctAnswer: 0,
-    explanation: 'Hoisting moves declarations.'
-  },
-  {
-    id: 17,
-    question: 'Which keyword has block scope?',
-    options: ['var', 'global', 'let', 'this'],
-    correctAnswer: 2,
-    explanation: '`let` is block scoped.'
-  },
-  {
-    id: 18,
-    question: 'What is a function?',
-    options: [
-      'A loop',
-      'A reusable block of code',
-      'A variable',
-      'A class'
-    ],
-    correctAnswer: 1,
-    explanation: 'Functions encapsulate reusable logic.'
-  },
-  {
-    id: 19,
-    question: 'What does return do?',
-    options: [
-      'Stops execution',
-      'Logs output',
-      'Returns a value',
-      'Declares a variable'
-    ],
-    correctAnswer: 2,
-    explanation: 'Return sends a value back.'
-  },
-  {
-    id: 20,
     question: 'What is scope?',
     options: [
       'Memory size',
@@ -215,8 +162,9 @@ const webDevQuestions: Question[] = [
     explanation: 'Scope defines where variables are accessible.'
   },
 
+  // ===== DOM & Events (16–20) =====
   {
-    id: 21,
+    id: 16,
     question: 'What is the DOM?',
     options: [
       'Document Object Model',
@@ -228,7 +176,7 @@ const webDevQuestions: Question[] = [
     explanation: 'DOM represents the document structure.'
   },
   {
-    id: 22,
+    id: 17,
     question: 'Which method selects by CSS selector?',
     options: [
       'getElementById',
@@ -240,7 +188,7 @@ const webDevQuestions: Question[] = [
     explanation: '`querySelector` uses CSS selectors.'
   },
   {
-    id: 23,
+    id: 18,
     question: 'What is an event?',
     options: [
       'A variable',
@@ -252,7 +200,7 @@ const webDevQuestions: Question[] = [
     explanation: 'Events are actions like clicks.'
   },
   {
-    id: 24,
+    id: 19,
     question: 'What is event bubbling?',
     options: [
       'Events move top-down',
@@ -264,7 +212,7 @@ const webDevQuestions: Question[] = [
     explanation: 'Bubbling propagates upward.'
   },
   {
-    id: 25,
+    id: 20,
     question: 'What does preventDefault() do?',
     options: [
       'Stops propagation',
@@ -276,8 +224,9 @@ const webDevQuestions: Question[] = [
     explanation: 'It prevents default browser actions.'
   },
 
+  // ===== Asynchronous JavaScript (21–25) =====
   {
-    id: 26,
+    id: 21,
     question: 'What is asynchronous programming?',
     options: [
       'Blocking execution',
@@ -289,7 +238,7 @@ const webDevQuestions: Question[] = [
     explanation: 'Async allows non-blocking tasks.'
   },
   {
-    id: 27,
+    id: 22,
     question: 'What problem do Promises solve?',
     options: [
       'Syntax errors',
@@ -301,7 +250,7 @@ const webDevQuestions: Question[] = [
     explanation: 'Promises improve async readability.'
   },
   {
-    id: 28,
+    id: 23,
     question: 'What does async/await do?',
     options: [
       'Blocks execution',
@@ -313,7 +262,7 @@ const webDevQuestions: Question[] = [
     explanation: 'Async/await simplifies async code.'
   },
   {
-    id: 29,
+    id: 24,
     question: 'What is the call stack?',
     options: [
       'Memory storage',
@@ -325,7 +274,7 @@ const webDevQuestions: Question[] = [
     explanation: 'The call stack tracks function execution.'
   },
   {
-    id: 30,
+    id: 25,
     question: 'What is a callback?',
     options: [
       'A returned value',
@@ -337,8 +286,9 @@ const webDevQuestions: Question[] = [
     explanation: 'Callbacks are functions passed to other functions.'
   },
 
+  // ===== Version Control, Git & Bitbucket (26–30) =====
   {
-    id: 31,
+    id: 26,
     question: 'What is version control?',
     options: [
       'Tracking file changes over time',
@@ -350,19 +300,7 @@ const webDevQuestions: Question[] = [
     explanation: 'Version control tracks changes.'
   },
   {
-    id: 32,
-    question: 'Why is version control important?',
-    options: [
-      'Improves UI',
-      'Enables collaboration',
-      'Speeds execution',
-      'Prevents all bugs'
-    ],
-    correctAnswer: 1,
-    explanation: 'It enables teamwork and history tracking.'
-  },
-  {
-    id: 33,
+    id: 27,
     question: 'What is Git?',
     options: [
       'A database',
@@ -374,19 +312,7 @@ const webDevQuestions: Question[] = [
     explanation: 'Git is a VCS.'
   },
   {
-    id: 34,
-    question: 'What is a repository?',
-    options: [
-      'A commit',
-      'A Git-tracked project',
-      'A branch',
-      'A server'
-    ],
-    correctAnswer: 1,
-    explanation: 'Repositories store project history.'
-  },
-  {
-    id: 35,
+    id: 28,
     question: 'What is a commit?',
     options: [
       'Deleting code',
@@ -397,45 +323,8 @@ const webDevQuestions: Question[] = [
     correctAnswer: 1,
     explanation: 'Commits save changes.'
   },
-
   {
-    id: 36,
-    question: 'What does git add do?',
-    options: [
-      'Commits files',
-      'Stages changes',
-      'Pushes to remote',
-      'Creates branch'
-    ],
-    correctAnswer: 1,
-    explanation: 'git add stages changes.'
-  },
-  {
-    id: 37,
-    question: 'What does git push do?',
-    options: [
-      'Uploads commits to remote',
-      'Downloads commits',
-      'Deletes history',
-      'Resets branch'
-    ],
-    correctAnswer: 0,
-    explanation: 'git push uploads commits.'
-  },
-  {
-    id: 38,
-    question: 'What does git pull do?',
-    options: [
-      'Deletes files',
-      'Fetches and merges changes',
-      'Creates commits',
-      'Stages files'
-    ],
-    correctAnswer: 1,
-    explanation: 'git pull updates local repo.'
-  },
-  {
-    id: 39,
+    id: 29,
     question: 'What is a branch?',
     options: [
       'A folder',
@@ -447,93 +336,7 @@ const webDevQuestions: Question[] = [
     explanation: 'Branches allow parallel work.'
   },
   {
-    id: 40,
-    question: 'What causes merge conflicts?',
-    options: [
-      'Slow network',
-      'Different changes to same file',
-      'Large files',
-      'Too many commits'
-    ],
-    correctAnswer: 1,
-    explanation: 'Conflicts occur on overlapping changes.'
-  },
-
-  {
-    id: 41,
-    question: 'What is a remote repository?',
-    options: [
-      'A deleted repo',
-      'An online-hosted repo',
-      'A branch',
-      'A commit'
-    ],
-    correctAnswer: 1,
-    explanation: 'Remote repos are hosted online.'
-  },
-  {
-    id: 42,
-    question: 'What is .gitignore used for?',
-    options: [
-      'Ignoring files from tracking',
-      'Deleting commits',
-      'Protecting branches',
-      'Storing credentials'
-    ],
-    correctAnswer: 0,
-    explanation: '.gitignore excludes files.'
-  },
-  {
-    id: 43,
-    question: 'What is HEAD in Git?',
-    options: [
-      'First commit',
-      'Current commit pointer',
-      'Remote branch',
-      'Main server'
-    ],
-    correctAnswer: 1,
-    explanation: 'HEAD points to current commit.'
-  },
-  {
-    id: 44,
-    question: 'What is a distributed VCS?',
-    options: [
-      'One central repo',
-      'Each user has full history',
-      'No backups',
-      'Cloud-only'
-    ],
-    correctAnswer: 1,
-    explanation: 'Distributed VCS gives full history to all users.'
-  },
-  {
-    id: 45,
-    question: 'What is refactoring?',
-    options: [
-      'Adding features',
-      'Improving code without changing behavior',
-      'Fixing bugs',
-      'Deploying code'
-    ],
-    correctAnswer: 1,
-    explanation: 'Refactoring improves code quality.'
-  },
-
-  {
-    id: 46,
-    question: 'What is debugging?',
-    options: [
-      'Writing tests',
-      'Finding and fixing errors',
-      'Deploying apps',
-      'Compiling code'
-    ],
-    correctAnswer: 1,
-    explanation: 'Debugging fixes bugs.'
-  },
-  {
-    id: 47,
+    id: 30,
     question: 'What is Bitbucket?',
     options: [
       'A Git hosting service',
@@ -543,42 +346,6 @@ const webDevQuestions: Question[] = [
     ],
     correctAnswer: 0,
     explanation: 'Bitbucket hosts Git repositories.'
-  },
-  {
-    id: 48,
-    question: 'What is Bitbucket mainly used for?',
-    options: [
-      'Designing UI',
-      'Hosting Git repositories',
-      'Writing JavaScript',
-      'Database management'
-    ],
-    correctAnswer: 1,
-    explanation: 'Bitbucket hosts and manages Git repos.'
-  },
-  {
-    id: 49,
-    question: 'What is collaboration in Git?',
-    options: [
-      'Writing code alone',
-      'Multiple developers working on same repo',
-      'Deleting branches',
-      'Resetting commits'
-    ],
-    correctAnswer: 1,
-    explanation: 'Collaboration allows team workflows.'
-  },
-  {
-    id: 50,
-    question: 'Why are commits important?',
-    options: [
-      'They track changes',
-      'They run code',
-      'They improve UI',
-      'They host projects'
-    ],
-    correctAnswer: 0,
-    explanation: 'Commits preserve history.'
   }
 ];
 
@@ -1063,7 +830,7 @@ export function WebDevQuiz({ onComplete,questionState,setQuestionState }: QuizPr
           <div className="flex justify-between items-center mb-4">
             <h1 className="text-3xl font-bold text-foreground">Web Development Quiz</h1>
             <div className="text-right flex flex-col items-end gap-2">
-              <QuizTimer initialMinutes={10} onTimeUp={handleTimeUp} />
+              <QuizTimer initialMinutes={15} onTimeUp={handleTimeUp} />
               <p className="text-sm text-muted-foreground">Question {currentQuestion + 1} of {webDevQuestions.length}</p>
               <p className="text-lg font-semibold text-primary">Score: {score}</p>
             </div>

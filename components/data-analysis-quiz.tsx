@@ -444,7 +444,7 @@ export function DataAnalysisQuiz({ onComplete }: QuizProps) {
           <div className="flex justify-between items-center mb-4">
             <h1 className="text-3xl font-bold text-foreground">Data Analysis Quiz</h1>
             <div className="text-right flex flex-col items-end gap-2">
-              <QuizTimer initialMinutes={20} onTimeUp={handleTimeUp} />
+              <QuizTimer initialMinutes={15} onTimeUp={handleTimeUp} />
               <p className="text-sm text-muted-foreground">Question {currentQuestion + 1} of {dataAnalyticsQuestions.length}</p>
               <p className="text-lg font-semibold text-accent">Score: {score}</p>
             </div>
